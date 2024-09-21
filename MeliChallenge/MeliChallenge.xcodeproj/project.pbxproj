@@ -14,6 +14,10 @@
 		0BB016902C9F61EA00257081 /* MeliChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB0168F2C9F61EA00257081 /* MeliChallengeTests.swift */; };
 		0BB0169A2C9F61EA00257081 /* MeliChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB016992C9F61EA00257081 /* MeliChallengeUITests.swift */; };
 		0BB0169C2C9F61EA00257081 /* MeliChallengeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB0169B2C9F61EA00257081 /* MeliChallengeUITestsLaunchTests.swift */; };
+		0BB016AC2C9F6AC900257081 /* SearchItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB016AB2C9F6AC900257081 /* SearchItem.swift */; };
+		0BB016AF2C9F710300257081 /* Price.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB016AE2C9F710300257081 /* Price.swift */; };
+		0BB016B12C9F717600257081 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB016B02C9F717600257081 /* Currency.swift */; };
+		0BB016B32C9F723E00257081 /* Installments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB016B22C9F723E00257081 /* Installments.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +48,10 @@
 		0BB016952C9F61EA00257081 /* MeliChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MeliChallengeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BB016992C9F61EA00257081 /* MeliChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeliChallengeUITests.swift; sourceTree = "<group>"; };
 		0BB0169B2C9F61EA00257081 /* MeliChallengeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeliChallengeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		0BB016AB2C9F6AC900257081 /* SearchItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchItem.swift; sourceTree = "<group>"; };
+		0BB016AE2C9F710300257081 /* Price.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Price.swift; sourceTree = "<group>"; };
+		0BB016B02C9F717600257081 /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
+		0BB016B22C9F723E00257081 /* Installments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Installments.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +102,7 @@
 		0BB0167D2C9F61E800257081 /* MeliChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				0BB016A82C9F69FC00257081 /* Features */,
 				0BB0167E2C9F61E800257081 /* MeliChallengeApp.swift */,
 				0BB016802C9F61E800257081 /* ContentView.swift */,
 				0BB016822C9F61EA00257081 /* Assets.xcassets */,
@@ -125,6 +134,41 @@
 				0BB0169B2C9F61EA00257081 /* MeliChallengeUITestsLaunchTests.swift */,
 			);
 			path = MeliChallengeUITests;
+			sourceTree = "<group>";
+		};
+		0BB016A82C9F69FC00257081 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				0BB016AA2C9F6A1500257081 /* Detail */,
+				0BB016A92C9F6A0500257081 /* SearchList */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		0BB016A92C9F6A0500257081 /* SearchList */ = {
+			isa = PBXGroup;
+			children = (
+				0BB016AD2C9F70D000257081 /* Models */,
+			);
+			path = SearchList;
+			sourceTree = "<group>";
+		};
+		0BB016AA2C9F6A1500257081 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		0BB016AD2C9F70D000257081 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0BB016AB2C9F6AC900257081 /* SearchItem.swift */,
+				0BB016AE2C9F710300257081 /* Price.swift */,
+				0BB016B02C9F717600257081 /* Currency.swift */,
+				0BB016B22C9F723E00257081 /* Installments.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,7 +302,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				0BB016812C9F61E800257081 /* ContentView.swift in Sources */,
+				0BB016B12C9F717600257081 /* Currency.swift in Sources */,
 				0BB0167F2C9F61E800257081 /* MeliChallengeApp.swift in Sources */,
+				0BB016B32C9F723E00257081 /* Installments.swift in Sources */,
+				0BB016AC2C9F6AC900257081 /* SearchItem.swift in Sources */,
+				0BB016AF2C9F710300257081 /* Price.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

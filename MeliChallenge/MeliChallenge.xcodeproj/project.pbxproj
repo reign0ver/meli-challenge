@@ -18,6 +18,8 @@
 		0BB016AF2C9F710300257081 /* Price.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB016AE2C9F710300257081 /* Price.swift */; };
 		0BB016B12C9F717600257081 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB016B02C9F717600257081 /* Currency.swift */; };
 		0BB016B32C9F723E00257081 /* Installments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB016B22C9F723E00257081 /* Installments.swift */; };
+		0BB016B62C9F803F00257081 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB016B52C9F803F00257081 /* HTTPClient.swift */; };
+		0BB016B82C9F831400257081 /* URLSessionHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB016B72C9F831400257081 /* URLSessionHTTPClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,8 @@
 		0BB016AE2C9F710300257081 /* Price.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Price.swift; sourceTree = "<group>"; };
 		0BB016B02C9F717600257081 /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
 		0BB016B22C9F723E00257081 /* Installments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Installments.swift; sourceTree = "<group>"; };
+		0BB016B52C9F803F00257081 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		0BB016B72C9F831400257081 /* URLSessionHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +106,7 @@
 		0BB0167D2C9F61E800257081 /* MeliChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				0BB016B42C9F801700257081 /* NetworkServices */,
 				0BB016A82C9F69FC00257081 /* Features */,
 				0BB0167E2C9F61E800257081 /* MeliChallengeApp.swift */,
 				0BB016802C9F61E800257081 /* ContentView.swift */,
@@ -169,6 +174,15 @@
 				0BB016B22C9F723E00257081 /* Installments.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		0BB016B42C9F801700257081 /* NetworkServices */ = {
+			isa = PBXGroup;
+			children = (
+				0BB016B52C9F803F00257081 /* HTTPClient.swift */,
+				0BB016B72C9F831400257081 /* URLSessionHTTPClient.swift */,
+			);
+			path = NetworkServices;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -304,6 +318,8 @@
 				0BB016812C9F61E800257081 /* ContentView.swift in Sources */,
 				0BB016B12C9F717600257081 /* Currency.swift in Sources */,
 				0BB0167F2C9F61E800257081 /* MeliChallengeApp.swift in Sources */,
+				0BB016B82C9F831400257081 /* URLSessionHTTPClient.swift in Sources */,
+				0BB016B62C9F803F00257081 /* HTTPClient.swift in Sources */,
 				0BB016B32C9F723E00257081 /* Installments.swift in Sources */,
 				0BB016AC2C9F6AC900257081 /* SearchItem.swift in Sources */,
 				0BB016AF2C9F710300257081 /* Price.swift in Sources */,

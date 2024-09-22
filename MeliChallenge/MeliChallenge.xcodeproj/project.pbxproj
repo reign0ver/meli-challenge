@@ -14,14 +14,15 @@
 		0BB016902C9F61EA00257081 /* MeliChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB0168F2C9F61EA00257081 /* MeliChallengeTests.swift */; };
 		0BB0169A2C9F61EA00257081 /* MeliChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB016992C9F61EA00257081 /* MeliChallengeUITests.swift */; };
 		0BB0169C2C9F61EA00257081 /* MeliChallengeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB0169B2C9F61EA00257081 /* MeliChallengeUITestsLaunchTests.swift */; };
-		0BB016AC2C9F6AC900257081 /* SearchItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB016AB2C9F6AC900257081 /* SearchItem.swift */; };
-		0BB016AF2C9F710300257081 /* Price.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB016AE2C9F710300257081 /* Price.swift */; };
-		0BB016B12C9F717600257081 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB016B02C9F717600257081 /* Currency.swift */; };
+		0BB016AC2C9F6AC900257081 /* RemoteSearchItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB016AB2C9F6AC900257081 /* RemoteSearchItem.swift */; };
+		0BB016AF2C9F710300257081 /* RemotePrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB016AE2C9F710300257081 /* RemotePrice.swift */; };
+		0BB016B12C9F717600257081 /* RemoteCurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB016B02C9F717600257081 /* RemoteCurrency.swift */; };
 		0BB016B32C9F723E00257081 /* Installments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB016B22C9F723E00257081 /* Installments.swift */; };
 		0BB016B62C9F803F00257081 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB016B52C9F803F00257081 /* HTTPClient.swift */; };
 		0BB016B82C9F831400257081 /* URLSessionHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB016B72C9F831400257081 /* URLSessionHTTPClient.swift */; };
 		0BB016BB2C9F877F00257081 /* SearchEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB016BA2C9F877F00257081 /* SearchEndpoint.swift */; };
 		0BB016BE2CA073F500257081 /* SearchDataMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB016BD2CA073F500257081 /* SearchDataMapper.swift */; };
+		0BB016C02CA0814100257081 /* SearchItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB016BF2CA0814100257081 /* SearchItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,14 +53,15 @@
 		0BB016952C9F61EA00257081 /* MeliChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MeliChallengeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BB016992C9F61EA00257081 /* MeliChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeliChallengeUITests.swift; sourceTree = "<group>"; };
 		0BB0169B2C9F61EA00257081 /* MeliChallengeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeliChallengeUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		0BB016AB2C9F6AC900257081 /* SearchItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchItem.swift; sourceTree = "<group>"; };
-		0BB016AE2C9F710300257081 /* Price.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Price.swift; sourceTree = "<group>"; };
-		0BB016B02C9F717600257081 /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
+		0BB016AB2C9F6AC900257081 /* RemoteSearchItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteSearchItem.swift; sourceTree = "<group>"; };
+		0BB016AE2C9F710300257081 /* RemotePrice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemotePrice.swift; sourceTree = "<group>"; };
+		0BB016B02C9F717600257081 /* RemoteCurrency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteCurrency.swift; sourceTree = "<group>"; };
 		0BB016B22C9F723E00257081 /* Installments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Installments.swift; sourceTree = "<group>"; };
 		0BB016B52C9F803F00257081 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		0BB016B72C9F831400257081 /* URLSessionHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClient.swift; sourceTree = "<group>"; };
 		0BB016BA2C9F877F00257081 /* SearchEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchEndpoint.swift; sourceTree = "<group>"; };
 		0BB016BD2CA073F500257081 /* SearchDataMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDataMapper.swift; sourceTree = "<group>"; };
+		0BB016BF2CA0814100257081 /* SearchItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +152,7 @@
 		0BB016A92C9F6A0500257081 /* SearchFeature */ = {
 			isa = PBXGroup;
 			children = (
+				0BB016BF2CA0814100257081 /* SearchItem.swift */,
 			);
 			path = SearchFeature;
 			sourceTree = "<group>";
@@ -164,9 +167,9 @@
 		0BB016AD2C9F70D000257081 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				0BB016AB2C9F6AC900257081 /* SearchItem.swift */,
-				0BB016AE2C9F710300257081 /* Price.swift */,
-				0BB016B02C9F717600257081 /* Currency.swift */,
+				0BB016AB2C9F6AC900257081 /* RemoteSearchItem.swift */,
+				0BB016AE2C9F710300257081 /* RemotePrice.swift */,
+				0BB016B02C9F717600257081 /* RemoteCurrency.swift */,
 				0BB016B22C9F723E00257081 /* Installments.swift */,
 			);
 			path = Models;
@@ -322,14 +325,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				0BB016812C9F61E800257081 /* ContentView.swift in Sources */,
-				0BB016B12C9F717600257081 /* Currency.swift in Sources */,
+				0BB016B12C9F717600257081 /* RemoteCurrency.swift in Sources */,
+				0BB016C02CA0814100257081 /* SearchItem.swift in Sources */,
 				0BB0167F2C9F61E800257081 /* MeliChallengeApp.swift in Sources */,
 				0BB016B82C9F831400257081 /* URLSessionHTTPClient.swift in Sources */,
 				0BB016B62C9F803F00257081 /* HTTPClient.swift in Sources */,
 				0BB016B32C9F723E00257081 /* Installments.swift in Sources */,
 				0BB016BE2CA073F500257081 /* SearchDataMapper.swift in Sources */,
-				0BB016AC2C9F6AC900257081 /* SearchItem.swift in Sources */,
-				0BB016AF2C9F710300257081 /* Price.swift in Sources */,
+				0BB016AC2C9F6AC900257081 /* RemoteSearchItem.swift in Sources */,
+				0BB016AF2C9F710300257081 /* RemotePrice.swift in Sources */,
 				0BB016BB2C9F877F00257081 /* SearchEndpoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

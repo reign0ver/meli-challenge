@@ -1,11 +1,11 @@
 //
-//  Price.swift
+//  RemotePrice.swift
 //  MeliChallenge
 //
 //  Created by Andrés Carrillo on 21/09/24.
 //
 extension SearchDataMapper {
-    struct Price: Decodable {
+    struct RemotePrice: Decodable {
         // We don't want to make this property available since it is used just
         // to decode the type property, evaluate it and assign dynamically the content property.
         private let type: String

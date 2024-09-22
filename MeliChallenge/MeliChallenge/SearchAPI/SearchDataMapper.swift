@@ -10,17 +10,23 @@ import Foundation
 public final class SearchDataMapper {
     public enum Error: Swift.Error {
         case invalidData
+        case invalidHttpStatusCode
     }
     
     private static var httpStatusCode200: Int { 200 }
     
     public static func map(_ data: Data, from response: HTTPURLResponse) throws -> [SearchItem] {
-        guard response.statusCode == httpStatusCode200,
-              let root = try? JSONDecoder().decode(Root.self, from: data) else {
-            throw Error.invalidData
+        guard response.statusCode == httpStatusCode200 else {
+            throw Error.invalidHttpStatusCode
         }
         
-        return root.mappedItems
+        do {
+            let root = try JSONDecoder().decode(Root.self, from: data)
+            return root.mappedItems
+        } catch {
+            print(error)
+            throw Error.invalidData
+        }
     }
 }
 

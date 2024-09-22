@@ -8,7 +8,7 @@
 import Foundation
 
 public struct SearchItem: Equatable {
-    public let id: UUID
+    public let id: String
     public let imageURL: URL
     public let name: String
     public let price: PriceType
@@ -22,7 +22,7 @@ public struct SearchItem: Equatable {
     }
     
     public init(
-        id: UUID,
+        id: String,
         imageURL: URL,
         name: String,
         price: PriceType,

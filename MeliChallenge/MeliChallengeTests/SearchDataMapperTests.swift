@@ -38,8 +38,8 @@ final class SearchDataMapperTests: XCTestCase {
     }
     
     func test_map_deliversItemsOn200HTTPResponseWithJSONItems() throws {
-        let item1 = makeItem(id: UUID(), imageURL: anyURL(), name: "Apple Magic Mouse", price: 350_000, currency: "COP")
-        let item2 = makeItem(id: UUID(), imageURL: anyURL(), name: "Playseat F1 Seat", price: 7_500_000, currency: "COP")
+        let item1 = makeItem(id: "some-id", imageURL: anyURL(), name: "Apple Magic Mouse", price: 350_000, currency: "COP")
+        let item2 = makeItem(id: "some-another-id", imageURL: anyURL(), name: "Playseat F1 Seat", price: 7_500_000, currency: "COP")
         
         let json = makeItemsJSON([item1.json, item2.json])
         
@@ -52,7 +52,7 @@ final class SearchDataMapperTests: XCTestCase {
 // MARK: - Helpers
 private extension SearchDataMapperTests {
     func makeItem(
-        id: UUID,
+        id: String,
         imageURL: URL = URL(string: "http://a-url.com")!,
         name: String = "",
         price: Double = 10_000,
@@ -74,7 +74,7 @@ private extension SearchDataMapperTests {
         )
         
         let json: [String: Any] = [
-            "id": id.uuidString,
+            "id": id,
             "thumbnail": imageURL.absoluteString,
             "title": name,
             "sale_price": [

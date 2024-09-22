@@ -9,7 +9,7 @@ import Foundation
 
 extension SearchDataMapper {
     struct RemoteSearchItem: Decodable {
-        let id: UUID
+        let id: String
         let imageURL: URL
         let name: String
         let price: RemotePrice
@@ -29,7 +29,7 @@ extension SearchDataMapper {
         
         init(from decoder: any Decoder) throws {
             let container = try decoder.container(keyedBy: CodingKeys.self)
-            self.id = try container.decode(UUID.self, forKey: .id)
+            self.id = try container.decode(String.self, forKey: .id)
             self.imageURL = try container.decode(URL.self, forKey: .imageURL)
             self.name = try container.decode(String.self, forKey: .name)
             self.price = try container.decode(RemotePrice.self, forKey: .price)

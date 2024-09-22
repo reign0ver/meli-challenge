@@ -38,19 +38,16 @@ private extension SearchDataMapper {
                     currency: Currency(rawValue: $0.currency.rawValue) ?? .cop,
                     numberOfInstallments: $0.installments?.numberOfInstallments,
                     priceOfEachInstallment: $0.installments?.priceOfEachInstallment,
-                    freeShipping: true // TODO: Map the right value
+                    freeShipping: false // TODO: Map the right value
                 )
             }
         }
         
         private func mapPrice(_ price: RemotePrice) -> PriceType {
-            switch price.content {
-            case .promotion(let price):
-                return .promotion(price: price.promotionAmount, regularPrice: price.regularAmount)
-            case .standard(let price):
+            if let regularPrice = price.regularAmount {
+                return .promotion(price: price.amount, regularPrice: regularPrice)
+            } else {
                 return .standard(price: price.amount)
-            case .unknown:
-                return .standard(price: 0) // check this case and see if it worth it
             }
         }
     }

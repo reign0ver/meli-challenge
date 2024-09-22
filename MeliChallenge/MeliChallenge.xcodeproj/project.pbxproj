@@ -12,8 +12,6 @@
 		0BB016832C9F61EA00257081 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BB016822C9F61EA00257081 /* Assets.xcassets */; };
 		0BB016862C9F61EA00257081 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BB016852C9F61EA00257081 /* Preview Assets.xcassets */; };
 		0BB016902C9F61EA00257081 /* MeliChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB0168F2C9F61EA00257081 /* MeliChallengeTests.swift */; };
-		0BB0169A2C9F61EA00257081 /* MeliChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB016992C9F61EA00257081 /* MeliChallengeUITests.swift */; };
-		0BB0169C2C9F61EA00257081 /* MeliChallengeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB0169B2C9F61EA00257081 /* MeliChallengeUITestsLaunchTests.swift */; };
 		0BB016AC2C9F6AC900257081 /* RemoteSearchItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB016AB2C9F6AC900257081 /* RemoteSearchItem.swift */; };
 		0BB016AF2C9F710300257081 /* RemotePrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB016AE2C9F710300257081 /* RemotePrice.swift */; };
 		0BB016B12C9F717600257081 /* RemoteCurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB016B02C9F717600257081 /* RemoteCurrency.swift */; };
@@ -33,13 +31,6 @@
 			remoteGlobalIDString = 0BB0167A2C9F61E800257081;
 			remoteInfo = MeliChallenge;
 		};
-		0BB016962C9F61EA00257081 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0BB016732C9F61E800257081 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 0BB0167A2C9F61E800257081;
-			remoteInfo = MeliChallenge;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -50,9 +41,6 @@
 		0BB016852C9F61EA00257081 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0BB0168B2C9F61EA00257081 /* MeliChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MeliChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BB0168F2C9F61EA00257081 /* MeliChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeliChallengeTests.swift; sourceTree = "<group>"; };
-		0BB016952C9F61EA00257081 /* MeliChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MeliChallengeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0BB016992C9F61EA00257081 /* MeliChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeliChallengeUITests.swift; sourceTree = "<group>"; };
-		0BB0169B2C9F61EA00257081 /* MeliChallengeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeliChallengeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		0BB016AB2C9F6AC900257081 /* RemoteSearchItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteSearchItem.swift; sourceTree = "<group>"; };
 		0BB016AE2C9F710300257081 /* RemotePrice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemotePrice.swift; sourceTree = "<group>"; };
 		0BB016B02C9F717600257081 /* RemoteCurrency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteCurrency.swift; sourceTree = "<group>"; };
@@ -79,13 +67,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0BB016922C9F61EA00257081 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -94,7 +75,6 @@
 			children = (
 				0BB0167D2C9F61E800257081 /* MeliChallenge */,
 				0BB0168E2C9F61EA00257081 /* MeliChallengeTests */,
-				0BB016982C9F61EA00257081 /* MeliChallengeUITests */,
 				0BB0167C2C9F61E800257081 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -104,7 +84,6 @@
 			children = (
 				0BB0167B2C9F61E800257081 /* MeliChallenge.app */,
 				0BB0168B2C9F61EA00257081 /* MeliChallengeTests.xctest */,
-				0BB016952C9F61EA00257081 /* MeliChallengeUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -138,15 +117,6 @@
 				0BB0168F2C9F61EA00257081 /* MeliChallengeTests.swift */,
 			);
 			path = MeliChallengeTests;
-			sourceTree = "<group>";
-		};
-		0BB016982C9F61EA00257081 /* MeliChallengeUITests */ = {
-			isa = PBXGroup;
-			children = (
-				0BB016992C9F61EA00257081 /* MeliChallengeUITests.swift */,
-				0BB0169B2C9F61EA00257081 /* MeliChallengeUITestsLaunchTests.swift */,
-			);
-			path = MeliChallengeUITests;
 			sourceTree = "<group>";
 		};
 		0BB016A92C9F6A0500257081 /* SearchFeature */ = {
@@ -232,24 +202,6 @@
 			productReference = 0BB0168B2C9F61EA00257081 /* MeliChallengeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		0BB016942C9F61EA00257081 /* MeliChallengeUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 0BB016A52C9F61EA00257081 /* Build configuration list for PBXNativeTarget "MeliChallengeUITests" */;
-			buildPhases = (
-				0BB016912C9F61EA00257081 /* Sources */,
-				0BB016922C9F61EA00257081 /* Frameworks */,
-				0BB016932C9F61EA00257081 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				0BB016972C9F61EA00257081 /* PBXTargetDependency */,
-			);
-			name = MeliChallengeUITests;
-			productName = MeliChallengeUITests;
-			productReference = 0BB016952C9F61EA00257081 /* MeliChallengeUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -264,10 +216,6 @@
 						CreatedOnToolsVersion = 15.4;
 					};
 					0BB0168A2C9F61EA00257081 = {
-						CreatedOnToolsVersion = 15.4;
-						TestTargetID = 0BB0167A2C9F61E800257081;
-					};
-					0BB016942C9F61EA00257081 = {
 						CreatedOnToolsVersion = 15.4;
 						TestTargetID = 0BB0167A2C9F61E800257081;
 					};
@@ -288,7 +236,6 @@
 			targets = (
 				0BB0167A2C9F61E800257081 /* MeliChallenge */,
 				0BB0168A2C9F61EA00257081 /* MeliChallengeTests */,
-				0BB016942C9F61EA00257081 /* MeliChallengeUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -304,13 +251,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		0BB016892C9F61EA00257081 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0BB016932C9F61EA00257081 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -346,15 +286,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0BB016912C9F61EA00257081 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0BB0169A2C9F61EA00257081 /* MeliChallengeUITests.swift in Sources */,
-				0BB0169C2C9F61EA00257081 /* MeliChallengeUITestsLaunchTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -362,11 +293,6 @@
 			isa = PBXTargetDependency;
 			target = 0BB0167A2C9F61E800257081 /* MeliChallenge */;
 			targetProxy = 0BB0168C2C9F61EA00257081 /* PBXContainerItemProxy */;
-		};
-		0BB016972C9F61EA00257081 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 0BB0167A2C9F61E800257081 /* MeliChallenge */;
-			targetProxy = 0BB016962C9F61EA00257081 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -588,42 +514,6 @@
 			};
 			name = Release;
 		};
-		0BB016A62C9F61EA00257081 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 5R3NRRRC6P;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.andrescarrillo.MeliChallengeUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = MeliChallenge;
-			};
-			name = Debug;
-		};
-		0BB016A72C9F61EA00257081 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 5R3NRRRC6P;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.andrescarrillo.MeliChallengeUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = MeliChallenge;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -650,15 +540,6 @@
 			buildConfigurations = (
 				0BB016A32C9F61EA00257081 /* Debug */,
 				0BB016A42C9F61EA00257081 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		0BB016A52C9F61EA00257081 /* Build configuration list for PBXNativeTarget "MeliChallengeUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				0BB016A62C9F61EA00257081 /* Debug */,
-				0BB016A72C9F61EA00257081 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

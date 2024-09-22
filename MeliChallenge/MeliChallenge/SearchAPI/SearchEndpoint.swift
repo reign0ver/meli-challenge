@@ -12,14 +12,14 @@ public enum SearchEndpoint {
     
     public func url(baseURL: URL) -> URL {
         switch self {
-        case let .get(serch):
+        case let .get(search):
             var components = URLComponents()
             components.scheme = baseURL.scheme
             components.host = baseURL.host
-            components.path = baseURL.path() + "/search"
+            components.path = baseURL.path() + "/sites/MCO/search"
             components.queryItems = [
+                URLQueryItem(name: "q", value: search),
                 URLQueryItem(name: "limit", value: "10")
-                // TODO: Add the search text query item
             ].compactMap { $0 }
             
             // we force it because otherwise it makes no sense to continue the execution

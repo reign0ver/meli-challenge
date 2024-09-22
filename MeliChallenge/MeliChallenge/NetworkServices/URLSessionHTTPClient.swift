@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Concrete implementation of the protocol HTTPClient using URLSession
 public final class URLSessionHTTPClient: HTTPClient {
     private let session: URLSession
     

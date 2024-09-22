@@ -20,6 +20,8 @@
 		0BB016B32C9F723E00257081 /* Installments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB016B22C9F723E00257081 /* Installments.swift */; };
 		0BB016B62C9F803F00257081 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB016B52C9F803F00257081 /* HTTPClient.swift */; };
 		0BB016B82C9F831400257081 /* URLSessionHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB016B72C9F831400257081 /* URLSessionHTTPClient.swift */; };
+		0BB016BB2C9F877F00257081 /* SearchEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB016BA2C9F877F00257081 /* SearchEndpoint.swift */; };
+		0BB016BE2CA073F500257081 /* SearchDataMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB016BD2CA073F500257081 /* SearchDataMapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,8 @@
 		0BB016B22C9F723E00257081 /* Installments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Installments.swift; sourceTree = "<group>"; };
 		0BB016B52C9F803F00257081 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		0BB016B72C9F831400257081 /* URLSessionHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClient.swift; sourceTree = "<group>"; };
+		0BB016BA2C9F877F00257081 /* SearchEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchEndpoint.swift; sourceTree = "<group>"; };
+		0BB016BD2CA073F500257081 /* SearchDataMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDataMapper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,8 +110,10 @@
 		0BB0167D2C9F61E800257081 /* MeliChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				0BB016BC2CA0738000257081 /* SearchAPI */,
+				0BB016A92C9F6A0500257081 /* SearchFeature */,
+				0BB016AA2C9F6A1500257081 /* DetailFeature */,
 				0BB016B42C9F801700257081 /* NetworkServices */,
-				0BB016A82C9F69FC00257081 /* Features */,
 				0BB0167E2C9F61E800257081 /* MeliChallengeApp.swift */,
 				0BB016802C9F61E800257081 /* ContentView.swift */,
 				0BB016822C9F61EA00257081 /* Assets.xcassets */,
@@ -141,28 +147,18 @@
 			path = MeliChallengeUITests;
 			sourceTree = "<group>";
 		};
-		0BB016A82C9F69FC00257081 /* Features */ = {
+		0BB016A92C9F6A0500257081 /* SearchFeature */ = {
 			isa = PBXGroup;
 			children = (
-				0BB016AA2C9F6A1500257081 /* Detail */,
-				0BB016A92C9F6A0500257081 /* SearchList */,
 			);
-			path = Features;
+			path = SearchFeature;
 			sourceTree = "<group>";
 		};
-		0BB016A92C9F6A0500257081 /* SearchList */ = {
-			isa = PBXGroup;
-			children = (
-				0BB016AD2C9F70D000257081 /* Models */,
-			);
-			path = SearchList;
-			sourceTree = "<group>";
-		};
-		0BB016AA2C9F6A1500257081 /* Detail */ = {
+		0BB016AA2C9F6A1500257081 /* DetailFeature */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = Detail;
+			path = DetailFeature;
 			sourceTree = "<group>";
 		};
 		0BB016AD2C9F70D000257081 /* Models */ = {
@@ -183,6 +179,16 @@
 				0BB016B72C9F831400257081 /* URLSessionHTTPClient.swift */,
 			);
 			path = NetworkServices;
+			sourceTree = "<group>";
+		};
+		0BB016BC2CA0738000257081 /* SearchAPI */ = {
+			isa = PBXGroup;
+			children = (
+				0BB016AD2C9F70D000257081 /* Models */,
+				0BB016BA2C9F877F00257081 /* SearchEndpoint.swift */,
+				0BB016BD2CA073F500257081 /* SearchDataMapper.swift */,
+			);
+			path = SearchAPI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -321,8 +327,10 @@
 				0BB016B82C9F831400257081 /* URLSessionHTTPClient.swift in Sources */,
 				0BB016B62C9F803F00257081 /* HTTPClient.swift in Sources */,
 				0BB016B32C9F723E00257081 /* Installments.swift in Sources */,
+				0BB016BE2CA073F500257081 /* SearchDataMapper.swift in Sources */,
 				0BB016AC2C9F6AC900257081 /* SearchItem.swift in Sources */,
 				0BB016AF2C9F710300257081 /* Price.swift in Sources */,
+				0BB016BB2C9F877F00257081 /* SearchEndpoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

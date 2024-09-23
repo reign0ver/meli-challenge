@@ -15,7 +15,7 @@ extension SearchDataMapper {
         let price: RemotePrice
         let currency: RemoteCurrency
         let installments: Installments?
-        let freeShipping: Bool // custom container
+        let freeShipping: Bool
         
         private enum CodingKeys: String, CodingKey {
             case id
@@ -24,19 +24,24 @@ extension SearchDataMapper {
             case price = "sale_price"
             case currency = "currency_id"
             case installments
-            case freeShipping
+            case shipping
+        }
+        
+        private enum ShippingCodingKeys: String, CodingKey {
+            case freeShipping = "free_shipping"
         }
         
         init(from decoder: any Decoder) throws {
             let container = try decoder.container(keyedBy: CodingKeys.self)
-            self.id = try container.decode(String.self, forKey: .id)
-            self.imageURL = try container.decode(URL.self, forKey: .imageURL)
-            self.name = try container.decode(String.self, forKey: .name)
-            self.price = try container.decode(RemotePrice.self, forKey: .price)
-            self.currency = try container.decode(RemoteCurrency.self, forKey: .currency)
-            self.installments = try container.decodeIfPresent(Installments.self, forKey: .installments)
-            // TODO: Decode specific inner field 'shipping' and extract 'free_shipping' bool value
-            self.freeShipping = try container.decodeIfPresent(Bool.self, forKey: .freeShipping) ?? false
+            let innerContainer = try container.nestedContainer(keyedBy: ShippingCodingKeys.self, forKey: .shipping)
+            
+            id = try container.decode(String.self, forKey: .id)
+            imageURL = try container.decode(URL.self, forKey: .imageURL)
+            name = try container.decode(String.self, forKey: .name)
+            price = try container.decode(RemotePrice.self, forKey: .price)
+            currency = try container.decode(RemoteCurrency.self, forKey: .currency)
+            installments = try container.decodeIfPresent(Installments.self, forKey: .installments)
+            freeShipping = try innerContainer.decode(Bool.self, forKey: .freeShipping)
         }
     }
 }

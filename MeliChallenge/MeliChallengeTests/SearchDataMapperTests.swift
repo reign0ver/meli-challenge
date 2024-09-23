@@ -38,8 +38,22 @@ final class SearchDataMapperTests: XCTestCase {
     }
     
     func test_map_deliversItemsOn200HTTPResponseWithJSONItems() throws {
-        let item1 = makeItem(id: "some-id", imageURL: anyURL(), name: "Apple Magic Mouse", price: 350_000, currency: "COP")
-        let item2 = makeItem(id: "some-another-id", imageURL: anyURL(), name: "Playseat F1 Seat", price: 7_500_000, currency: "COP")
+        let item1 = makeItem(
+            id: "some-id",
+            imageURL: anyURL(),
+            name: "Apple Magic Mouse",
+            price: 350_000,
+            currency: "COP",
+            freeShipping: true
+        )
+        let item2 = makeItem(
+            id: "some-another-id",
+            imageURL: anyURL(),
+            name: "Playseat F1 Seat",
+            price: 7_500_000,
+            currency: "COP",
+            freeShipping: false
+        )
         
         let json = makeItemsJSON([item1.json, item2.json])
         
@@ -72,6 +86,22 @@ final class SearchDataMapperTests: XCTestCase {
         let expectedFormattedText = "en 6 cuotas de $\u{00a0}134.490"
         
         XCTAssertEqual(model.formattedInstallments, expectedFormattedText)
+    }
+    
+    func test_format_whenItemHasFreeShipping_thenAssertsFreeShippingFormattedText() {
+        let item = makeItem(id: "some-id", freeShipping: true)
+        let model = item.model
+        
+        let expectedFormattedText = "¡Envío gratis!"
+        
+        XCTAssertEqual(model.formattedFreeShipping, expectedFormattedText)
+    }
+    
+    func test_format_whenItemHasNoFreeShipping_thenFreeShippingFormattedTextIsNil() {
+        let item = makeItem(id: "some-id", freeShipping: false)
+        let model = item.model
+        
+        XCTAssertNil(model.formattedFreeShipping)
     }
 }
 

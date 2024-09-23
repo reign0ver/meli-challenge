@@ -13,18 +13,14 @@ public final class SearchDataMapper {
         case invalidHttpStatusCode
     }
     
-    private static var httpStatusCode200: Int { 200 }
-    
     public static func map(_ data: Data, from response: HTTPURLResponse) throws -> [SearchItem] {
-        guard response.statusCode == httpStatusCode200 else {
-            throw Error.invalidHttpStatusCode
-        }
+        guard response.isOK else { throw Error.invalidHttpStatusCode }
         
         do {
             let root = try JSONDecoder().decode(Root.self, from: data)
             return root.mappedItems
         } catch {
-            print(error)
+            print("Error decoding the response data: \(error)")
             throw Error.invalidData
         }
     }
@@ -44,7 +40,7 @@ private extension SearchDataMapper {
                     currency: Currency(rawValue: $0.currency.rawValue) ?? .cop,
                     numberOfInstallments: $0.installments?.numberOfInstallments,
                     priceOfEachInstallment: $0.installments?.priceOfEachInstallment,
-                    freeShipping: false // TODO: Map the right value
+                    freeShipping: $0.freeShipping
                 )
             }
         }

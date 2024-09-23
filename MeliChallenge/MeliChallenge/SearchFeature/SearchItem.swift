@@ -43,6 +43,9 @@ public struct SearchItem: Equatable {
 // in the scope/namespace of SearchItemRow could've been better. But I'm happy this way for now.
 extension SearchItem: Identifiable {}
 
+// Extension that holds business logic related to formatting the data the View will display.
+// Some of this logic should be better in a Presentation layer that maps this domain object
+// into something like: SearchItemRow.ViewModel. But as I said, it's a tradeoff and I'm happy this way.
 public extension SearchItem {
     var thumbnailURL: URL {
         // The response from the server returns a non-secure URL for the thumbnail (http instead of https protocol)

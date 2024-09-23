@@ -27,6 +27,7 @@
 		0BB214952CA0C8A0006A4EF1 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB214942CA0C8A0006A4EF1 /* SearchViewModel.swift */; };
 		0BB214972CA0CA1A006A4EF1 /* NetworkURLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB214962CA0CA1A006A4EF1 /* NetworkURLs.swift */; };
 		0BB214992CA0CDDC006A4EF1 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB214982CA0CDDC006A4EF1 /* SearchView.swift */; };
+		0BB2149B2CA0D813006A4EF1 /* SearchItemRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB2149A2CA0D813006A4EF1 /* SearchItemRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		0BB214942CA0C8A0006A4EF1 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		0BB214962CA0CA1A006A4EF1 /* NetworkURLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkURLs.swift; sourceTree = "<group>"; };
 		0BB214982CA0CDDC006A4EF1 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		0BB2149A2CA0D813006A4EF1 /* SearchItemRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchItemRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +141,7 @@
 				0BB016BF2CA0814100257081 /* SearchItem.swift */,
 				0BB214942CA0C8A0006A4EF1 /* SearchViewModel.swift */,
 				0BB214982CA0CDDC006A4EF1 /* SearchView.swift */,
+				0BB2149A2CA0D813006A4EF1 /* SearchItemRow.swift */,
 			);
 			path = SearchFeature;
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 				0BB016B62C9F803F00257081 /* HTTPClient.swift in Sources */,
 				0BB016B32C9F723E00257081 /* Installments.swift in Sources */,
 				0BB214992CA0CDDC006A4EF1 /* SearchView.swift in Sources */,
+				0BB2149B2CA0D813006A4EF1 /* SearchItemRow.swift in Sources */,
 				0BB016BE2CA073F500257081 /* SearchDataMapper.swift in Sources */,
 				0BB016AC2C9F6AC900257081 /* RemoteSearchItem.swift in Sources */,
 				0BB016AF2C9F710300257081 /* RemotePrice.swift in Sources */,

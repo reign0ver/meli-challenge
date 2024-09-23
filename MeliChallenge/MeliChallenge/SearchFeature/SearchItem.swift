@@ -8,18 +8,14 @@
 import Foundation
 
 public struct SearchItem: Equatable {
-    public let id: String
-    public let imageURL: URL
-    public let name: String
-    public let price: PriceType
-    public let currency: Currency
-    public let numberOfInstallments: Int?
-    public let priceOfEachInstallment: Double?
-    public let freeShipping: Bool
-    
-    public var hasInstallments: Bool {
-        numberOfInstallments != nil && priceOfEachInstallment != nil
-    }
+    private let id: String
+    private let imageURL: URL
+    private let name: String
+    private let price: PriceType
+    private let currency: Currency
+    private let numberOfInstallments: Int?
+    private let priceOfEachInstallment: Double?
+    private let freeShipping: Bool
     
     public init(
         id: String,
@@ -42,20 +38,44 @@ public struct SearchItem: Equatable {
     }
 }
 
+public extension SearchItem {
+    var thumbnailURL: URL { imageURL }
+    
+    var title: String { name }
+    
+    var formattedPrice: (price: String, regularPrice: String?) {
+        switch price {
+        case .promotion(let price, let regularPrice):
+            return (
+                price.formatted(.currency(code: currency.currencyCode)),
+                regularPrice.formatted(.currency(code: currency.currencyCode))
+            )
+        case .standard(let price):
+            return (price.formatted(.currency(code: currency.currencyCode)), nil)
+        }
+    }
+    
+    var formattedInstallments: String? {
+        guard let numberOfInstallments,
+              let installmentPrice = priceOfEachInstallment else {
+            return nil
+        }
+        let formattedInstallmentPrice = installmentPrice.formatted(.currency(code: currency.currencyCode))
+        return "en \(numberOfInstallments) cuotas de \(formattedInstallmentPrice)"
+    }
+    
+    var formattedFreeShipping: String? {
+        freeShipping ? "¡Envío gratis!" : nil
+    }
+}
+
 public enum Currency: String, Equatable {
     case cop = "COP"
+    
+    public var currencyCode: String { rawValue }
 }
 
 public enum PriceType: Equatable {
     case promotion(price: Double, regularPrice: Double)
     case standard(price: Double)
-    
-    public var isPromotion: Bool {
-        // TODO: Awful and I think it's not needed. Check if can be deleted later
-        if case .promotion = self {
-            return true
-        } else {
-            return false
-        }
-    }
 }

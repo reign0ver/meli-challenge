@@ -47,6 +47,30 @@ final class SearchDataMapperTests: XCTestCase {
         
         XCTAssertEqual(result, [item1.model, item2.model])
     }
+    
+    func test_format_whenItemHasPromotionPriceAndCurrencyIsCOP_thenAssertsTheExpectedFormattedPrice() {
+        let item = makeItem(
+            id: "some-id",
+            price: 450_000,
+            regularPrice: 590_000,
+            currency: "COP"
+        )
+        let model = item.model
+        
+        let expectedFormattedPrice = (price: "$\u{00a0}450.000", regularPrice: "$\u{00a0}590.000")
+        
+        XCTAssertEqual(model.formattedPrice.price, expectedFormattedPrice.price)
+        XCTAssertEqual(model.formattedPrice.regularPrice, expectedFormattedPrice.regularPrice)
+    }
+    
+    func test_format_whenItemHasInstallments_thenAssertsTheExpectedFormattedText() {
+        let item = makeItem(id: "some-id", numberOfInstallments: 6, priceOfEachInstallment: 134_490)
+        let model = item.model
+        
+        let expectedFormattedText = "en 6 cuotas de $\u{00a0}134.490"
+        
+        XCTAssertEqual(model.formattedInstallments, expectedFormattedText)
+    }
 }
 
 // MARK: - Helpers
@@ -62,11 +86,19 @@ private extension SearchDataMapperTests {
         priceOfEachInstallment: Double? = nil,
         freeShipping: Bool = false
     ) -> (model: SearchItem, json: [String: Any]) {
+        
+        let priceType: PriceType
+        if let regularPrice {
+            priceType = .promotion(price: price, regularPrice: regularPrice)
+        } else {
+            priceType = .standard(price: price)
+        }
+        
         let item = SearchItem(
             id: id,
             imageURL: imageURL,
             name: name,
-            price: PriceType.standard(price: price),
+            price: priceType,
             currency: Currency(rawValue: currency) ?? .cop,
             numberOfInstallments: numberOfInstallments,
             priceOfEachInstallment: priceOfEachInstallment,

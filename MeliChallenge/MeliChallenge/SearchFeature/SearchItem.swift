@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct SearchItem: Equatable {
+public struct SearchItem {
     public let id: String
     private let imageURL: URL
     private let name: String
@@ -42,6 +42,12 @@ public struct SearchItem: Equatable {
 // Discussion: SearchItem is a domain object. Create a new one that conforms Identifiable
 // in the scope/namespace of SearchItemRow could've been better. But I'm happy this way for now.
 extension SearchItem: Identifiable {}
+
+extension SearchItem: Hashable {
+    public func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
+}
 
 // Extension that holds business logic related to formatting the data the View will display.
 // Some of this logic should be better in a Presentation layer that maps this domain object

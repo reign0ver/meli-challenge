@@ -37,6 +37,7 @@
 		0BB214AA2CA1C2F9006A4EF1 /* HTTPURLResponse+StatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB214A92CA1C2F9006A4EF1 /* HTTPURLResponse+StatusCode.swift */; };
 		0BB214AC2CA1C3BC006A4EF1 /* DetailItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB214AB2CA1C3BC006A4EF1 /* DetailItem.swift */; };
 		0BB214AE2CA1C79F006A4EF1 /* DetailDataMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB214AD2CA1C79F006A4EF1 /* DetailDataMapperTests.swift */; };
+		0BB214B02CA21C96006A4EF1 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB214AF2CA21C96006A4EF1 /* AppCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +83,7 @@
 		0BB214A92CA1C2F9006A4EF1 /* HTTPURLResponse+StatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HTTPURLResponse+StatusCode.swift"; sourceTree = "<group>"; };
 		0BB214AB2CA1C3BC006A4EF1 /* DetailItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailItem.swift; sourceTree = "<group>"; };
 		0BB214AD2CA1C79F006A4EF1 /* DetailDataMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDataMapperTests.swift; sourceTree = "<group>"; };
+		0BB214AF2CA21C96006A4EF1 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +134,7 @@
 				0BB016802C9F61E800257081 /* ContentView.swift */,
 				0BB016822C9F61EA00257081 /* Assets.xcassets */,
 				0BB016842C9F61EA00257081 /* Preview Content */,
+				0BB214AF2CA21C96006A4EF1 /* AppCoordinator.swift */,
 			);
 			path = MeliChallenge;
 			sourceTree = "<group>";
@@ -332,6 +335,7 @@
 				0BB0167F2C9F61E800257081 /* MeliChallengeApp.swift in Sources */,
 				0BB214952CA0C8A0006A4EF1 /* SearchViewModel.swift in Sources */,
 				0BB016B82C9F831400257081 /* URLSessionHTTPClient.swift in Sources */,
+				0BB214B02CA21C96006A4EF1 /* AppCoordinator.swift in Sources */,
 				0BB214A62CA1BD85006A4EF1 /* RemoteDetailItem.swift in Sources */,
 				0BB016B62C9F803F00257081 /* HTTPClient.swift in Sources */,
 				0BB016B32C9F723E00257081 /* Installments.swift in Sources */,

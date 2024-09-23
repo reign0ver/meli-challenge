@@ -8,14 +8,23 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject private var coordinator = AppCoordinator()
+    @StateObject private var searchVM = SearchViewModel()
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack(path: $coordinator.navigationPath) {
+            SearchView(vm: searchVM, coordinator: coordinator)
+                .navigationDestination(
+                    for: AppCoordinator.Destination.self,
+                    destination: { destination in
+                        switch destination {
+                        case let .detail(item):
+                            let vm = DetailViewModel(item: item)
+                            DetailView(vm: vm)
+                        }
+                    }
+                )
         }
-        .padding()
     }
 }
 

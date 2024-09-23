@@ -8,28 +8,32 @@
 import SwiftUI
 
 struct SearchView: View {
-    @StateObject private var vm = SearchViewModel()
+    @ObservedObject private var vm: SearchViewModel
+    @ObservedObject private var coordinator: AppCoordinator
+    
+    init(vm: SearchViewModel, coordinator: AppCoordinator) {
+        self.vm = vm
+        self.coordinator = coordinator
+    }
     
     var body: some View {
-        NavigationStack {
-            VStack(alignment: .center) {
-                switch vm.state {
-                case .idle: 
-                    getInitialStateView()
-                case .loading: 
-                    ProgressView()
-                case .loaded(let results):
-                    getSearchResultsView(results)
-                case .emptyResults:
-                    getEmptyView()
-                case .error(let errorModel):
-                    getErrorView(errorModel)
-                }
+        VStack(alignment: .center) {
+            switch vm.state {
+            case .idle:
+                getInitialStateView()
+            case .loading:
+                ProgressView()
+            case .loaded(let results):
+                getSearchResultsView(results)
+            case .emptyResults:
+                getEmptyView()
+            case .error(let errorModel):
+                getErrorView(errorModel)
             }
-            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
-            .navigationTitle("Busca en Meli")
-            .navigationBarTitleDisplayMode(.inline)
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
+        .navigationTitle("Busca en Meli")
+        .navigationBarTitleDisplayMode(.inline)
         .searchable(
             text: $vm.searchText,
             placement: .navigationBarDrawer(displayMode: .always),
@@ -44,11 +48,8 @@ struct SearchView: View {
     private func getSearchResultsView(_ items: [SearchItem]) -> some View {
         List {
             ForEach(items) { item in
-                // Fix this
-                // It is initializing and later releasing the Views/ViewModels
-                // of the visible Rows in the List
-                NavigationLink(
-                    destination: { DetailView(vm: .init(item: item)) },
+                Button(
+                    action: { coordinator.navigate(to: .detail(item: item)) },
                     label: { SearchItemRow(item: item) }
                 )
                 .listRowInsets(EdgeInsets())

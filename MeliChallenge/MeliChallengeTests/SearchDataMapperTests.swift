@@ -55,9 +55,9 @@ final class SearchDataMapperTests: XCTestCase {
             freeShipping: false
         )
         
-        let json = makeItemsJSON([item1.json, item2.json])
+        let jsonData = makeItemsJSON([item1.json, item2.json])
         
-        let result = try SearchDataMapper.map(json, from: HTTPURLResponse(statusCode: 200))
+        let result = try SearchDataMapper.map(jsonData, from: HTTPURLResponse(statusCode: 200))
         
         XCTAssertEqual(result, [item1.model, item2.model])
     }

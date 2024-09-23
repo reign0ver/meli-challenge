@@ -8,6 +8,6 @@
 extension SearchDataMapper {
     enum RemoteCurrency: String, Decodable {
         case cop = "COP"
-        case unknown // Handle this error case
+        case unknown // TODO: Handle this error case
     }
 }

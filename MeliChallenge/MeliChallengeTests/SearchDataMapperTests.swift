@@ -103,6 +103,19 @@ final class SearchDataMapperTests: XCTestCase {
         
         XCTAssertNil(model.formattedFreeShipping)
     }
+    
+    func test_format_whenItemHasPromotionAndCalculateDiscountPercentage_thenAssertsTheExpectedPercentage() {
+        let item = makeItem(
+            id: "some-id",
+            price: 478_413,
+            regularPrice: 549_900,
+            currency: "COP"
+        )
+        let model = item.model
+        let expectedDiscountString = "13% OFF"
+        
+        XCTAssertEqual(model.formattedDiscountPercentage, expectedDiscountString)
+    }
 }
 
 // MARK: - Helpers

@@ -84,6 +84,17 @@ public extension SearchItem {
     var formattedFreeShipping: String? {
         freeShipping ? "¡Envío gratis!" : nil
     }
+    
+    var formattedDiscountPercentage: String? {
+        if case .promotion(let price, let regularPrice) = price {
+            let discountAmount = regularPrice - price
+            let discountPercentage = (discountAmount / regularPrice) * 100
+            let roundedPercentage = Int(discountPercentage.rounded())
+            return "\(roundedPercentage)% OFF"
+        } else {
+            return nil
+        }
+    }
 }
 
 public enum Currency: String, Equatable {

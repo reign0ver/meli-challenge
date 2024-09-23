@@ -47,7 +47,7 @@ struct SearchItemRow: View {
     
     private var titleView: some View {
         Text(item.title)
-            .font(.body)
+            .font(.callout)
             .foregroundStyle(Color.primary)
             .lineLimit(3)
     }
@@ -57,15 +57,26 @@ struct SearchItemRow: View {
             if let regularPrice = item.formattedPrice.regularPrice {
                 Text(regularPrice)
                     .strikethrough()
-                    .font(.callout)
+                    .font(.footnote)
                     .foregroundStyle(Color.secondary)
                     .lineLimit(1)
             }
             
-            Text(item.formattedPrice.price)
-                .font(.title3)
-                .foregroundStyle(Color.primary)
-                .lineLimit(1)
+            HStack(alignment: .center, spacing: 8) {
+                Text(item.formattedPrice.price)
+                    .font(.title3)
+                    .foregroundStyle(Color.primary)
+                    .lineLimit(1)
+                
+                if let discount = item.formattedDiscountPercentage {
+                    Text(discount)
+                        .font(.caption)
+                        .foregroundStyle(Color.green)
+                        .lineLimit(1)
+                }
+                
+                Spacer()
+            }
         }
     }
     
@@ -73,7 +84,7 @@ struct SearchItemRow: View {
     private var installmentsInfoView: some View {
         if let installments = item.formattedInstallments {
             Text(installments)
-                .font(.callout)
+                .font(.footnote)
                 .foregroundStyle(Color.primary)
                 .lineLimit(1)
         }

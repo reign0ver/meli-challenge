@@ -8,7 +8,7 @@
 import Foundation
 
 public struct SearchItem: Equatable {
-    private let id: String
+    public let id: String
     private let imageURL: URL
     private let name: String
     private let price: PriceType
@@ -38,8 +38,22 @@ public struct SearchItem: Equatable {
     }
 }
 
+// MARK: Identifiable conformance to work with SwiftUI List
+// Discussion: SearchItem is a domain object. Create a new one that conforms Identifiable
+// in the scope/namespace of SearchItemRow could've been better. But I'm happy this way for now.
+extension SearchItem: Identifiable {}
+
 public extension SearchItem {
-    var thumbnailURL: URL { imageURL }
+    var thumbnailURL: URL {
+        // The response from the server returns a non-secure URL for the thumbnail (http instead of https protocol)
+        // So we replace the scheme for https to be able to download the resource, otherwise we need to allow
+        // non-secure requests in the app's Info.plist.
+        guard var components = URLComponents(url: imageURL, resolvingAgainstBaseURL: false) else {
+            return imageURL
+        }
+        components.scheme = "https"
+        return components.url!
+    }
     
     var title: String { name }
     

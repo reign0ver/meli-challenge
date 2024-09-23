@@ -12,14 +12,25 @@ struct SearchView: View {
     
     var body: some View {
         NavigationStack {
-            List {
-                Text("Item1")
-                Text("Item2")
-                Text("Item3")
-            }
+            List(
+                vm.items,
+                rowContent: { item in
+                    SearchItemRow(item: item)
+                }
+            )
+            .listStyle(.plain)
             .navigationTitle("Busca en Meli")
+            .navigationBarTitleDisplayMode(.inline)
         }
-        .onAppear(perform: { vm.search(text: "magic mouse") })
+        .searchable(
+            text: $vm.searchText,
+            placement: .navigationBarDrawer(displayMode: .always),
+            prompt: Text("Buscar")
+        )
+        .autocorrectionDisabled()
+        .textInputAutocapitalization(.never)
+        .scrollDismissesKeyboard(.interactively)
+        .onSubmit(of: .search) { vm.search(text: vm.searchText) }
     }
 }
 

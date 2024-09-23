@@ -56,7 +56,9 @@ final class SearchDataMapperTests: XCTestCase {
             currency: "COP"
         )
         let model = item.model
-        
+        // Formatter adds a non breaking space between the currency symbol and the amount
+        // '\u{00a0}' is the way Swift represents the especial character.
+        // See https://developer.apple.com/forums/thread/5868
         let expectedFormattedPrice = (price: "$\u{00a0}450.000", regularPrice: "$\u{00a0}590.000")
         
         XCTAssertEqual(model.formattedPrice.price, expectedFormattedPrice.price)
